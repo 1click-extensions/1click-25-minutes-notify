@@ -1,0 +1,11 @@
+{
+  "notification_title": {"message": "Tomato!" },
+  "notification_message": {"message": "25 minutes passed!" },
+  "start_notify": {"message": "Start" },
+  "stop_notify": {"message": "Stop" },
+  "restart_notify": {"message": "Restart" },
+  "browser_action": {"message": "Start notification" },
+  "ext_desc": {"message": "Pop notification each 25 minutes" },
+  "ext_name": {"message": "1click 25 minutes notification" }
+}
+
