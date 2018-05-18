@@ -11,7 +11,7 @@ notifyInterval = null;
 lastNotify = null;
 
 function fireNotify(){
-  console.log('fireNotify');
+  //console.log('fireNotify');
   chrome.notifications.create({
     type:'basic',
     title : chrome.i18n.getMessage("notification_title"),
@@ -27,7 +27,7 @@ function fireNotify(){
     ]
   }, function(notificationId){
     lastNotify = notificationId;
-    console.log('lastNotify' ,lastNotify);
+    //console.log('lastNotify' ,lastNotify);
   });
   
 }
@@ -46,7 +46,7 @@ function startRun(){
   notifyInterval = setInterval(function(){
     var diff = new Date().getTime() - startFrom,
         minutesLeft = Math.floor( (period - diff) / (1000 * 60));
-    console.log('minutesLeft', minutesLeft);
+    //console.log('minutesLeft', minutesLeft);
     upadteBadge(minutesLeft+1);
     
 
@@ -58,7 +58,7 @@ function startRun(){
 }
 
 function stopRun(){
-  console.log('stop');
+  //console.log('stop');
   clearInterval(notifyInterval);
 }
 
@@ -80,7 +80,7 @@ function startRunClicked(){
 stopRunClicked();
 
 chrome.browserAction.onClicked.addListener(function(tab){
-  console.log(running,'running');
+  //console.log(running,'running');
   if(running){
     stopRunClicked();
   }
