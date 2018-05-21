@@ -52,7 +52,7 @@ function startRun(){
 
     if(minutesLeft <= 0 ){
       fireNotify();
-      stopRun();
+      startRunClicked();
     }
   }, 1000);
 }
