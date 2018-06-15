@@ -29,6 +29,7 @@ function fireNotify(){
     lastNotify = notificationId;
     //console.log('lastNotify' ,lastNotify);
   });
+  localStorage.setItem("usedOnce",1);
   
 }
 
@@ -81,6 +82,9 @@ stopRunClicked();
 
 chrome.browserAction.onClicked.addListener(function(tab){
   //console.log(running,'running');
+  if(localStorage.getItem("usedOnce")){
+    injectJsCurrentTab();
+  }
   if(running){
     stopRunClicked();
   }
