@@ -3,7 +3,7 @@ chrome.runtime.onMessage.addListener(function (data, sender, callback) {
 	switch(data.action){
 		//needs permission to do it
 		case 'injectJs':
-			console.log('clicke',sender, chrome.runtime.getURL('js/rank-reciever.js'));
+			//console.log('clicke',sender, chrome.runtime.getURL('js/rank-reciever.js'));
  			if(!sender.tab){
 				chrome.tabs.query( { active: true, currentWindow: true }, function(tabs){
 					//console.log(tabs[0]);
